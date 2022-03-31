@@ -15,7 +15,6 @@ public class roll : MonoBehaviour
         
         rb = GetComponent<Rigidbody>();
         invis = GetComponent<MeshRenderer>();
-        invis.enabled = false;
         
     }
 
@@ -40,7 +39,7 @@ public class roll : MonoBehaviour
             //transform.position += transform.right * Time.deltaTime * 5;
             //rb.AddForce(20, 0, 0, ForceMode.Impulse);
             //rb.velocity = new Vector3(30, rb.velocity.y, rb.velocity.z);
-            rb.velocity = transform.forward * 30;
+            rb.velocity = transform.forward * 15;
             shot = 0;
 
 
@@ -60,14 +59,14 @@ public class roll : MonoBehaviour
             rb.rotation = Quaternion.identity;
             rb.velocity = new Vector3(0, 0, 0);
             rb.useGravity = false;
-            invis.enabled = false;
+
             rb.freezeRotation = false;
         }
         if (shot == 0)
         {
             
             rb.useGravity = true;
-            invis.enabled = true;
+
         }
 
 

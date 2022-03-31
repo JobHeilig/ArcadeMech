@@ -18,9 +18,9 @@ public class jumper : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position -= transform.right * Time.deltaTime * 5;
+            //transform.position -= transform.right * Time.deltaTime * 5;
             //rb.AddForce(-20, 0, 0);
-            //rb.velocity = new Vector3(-5, rb.velocity.y, rb.velocity.z);
+            rb.velocity = new Vector3(-5, rb.velocity.y, rb.velocity.z);
         }
 
 
